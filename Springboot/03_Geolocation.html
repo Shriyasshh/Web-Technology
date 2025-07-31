@@ -1,0 +1,31 @@
+<!-- Used to locate the users position 
+ Lets you share your location with websites -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+    <script >
+        function showPosition(){
+            console.log("This is the showPosition function");
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(function(position){
+                    var positionInfo='Your current position is (Latitude: '+ position.coords.latitude +', Longitude:' +position.coords.longitude +')';
+                    
+                document.getElementById('result').innerHTML=positionInfo
+                });
+            }
+            else{
+                alert('sorry, your browser does not support Geolocation');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="showPosition();" >Show Current Position Coords</button>
+    <div id="result">
+        <!-- Position info will be displayed here -->
+    </div>
+</body>
+</html>
