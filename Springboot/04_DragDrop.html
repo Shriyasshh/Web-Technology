@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop elements in HTML</title>
+    <script>
+        function dragStart(e){
+            // Sets the Operation allowed for a drag source
+            e.dataTransfer.effectAllowed = "move";
+            // Sets the value and type of the drag source 
+            e.dataTransfer.setData('Text',e.target.getAttribute('id'));
+
+        }
+
+        function dragOver(e){
+            // Prevents the default behavior to allow drop
+            e.preventDefault();
+            e.stopPropagation();
+            // Sets the effect allowed for the drop target
+        }
+
+        function drop(e){
+            // Cancel This event for everyone else
+            e.stopPropagation();
+            e.preventDefault();
+            
+            // Retrieve the dragged data by type
+            var data = e.dataTransfer.getData('Text');
+            e.target.appendChild(document.getElementById(data));
+        }
+    </script>
+
+    <style>
+        .dropBox{
+            width: 200px;
+            height: 200px;
+            border: 5px dashed grey;
+            background: lightblue;
+            text-align: center; 
+            margin: 20PX 0;
+            color: lightgreen;        
+        }
+        .dropBox img{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Drag & Drop Demo</h2>
+    <p> Drag and Drop the image in the Drop box</p>
+    <div id="dropBox" class="dropBox" 
+        ondragover="dragOver(event);">
+
+
+    </div>
+
+    <img src="file:///D:/Languages/Web%20Development/OIP.webp" alt="Balloon image" id="dragA" draggable="true" 
+    ondragstart="dragStart(event)" width="180" height="180">
+</body>
+</html>
