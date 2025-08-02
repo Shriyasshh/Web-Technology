@@ -3,7 +3,7 @@ from flask import Flask , render_template
 app = Flask(__name__)
 
 @app.route("/")
-def HRLLO():
+def LLO():
     return render_template("index.html")
 
 
