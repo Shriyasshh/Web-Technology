@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<style>
+    p {
+        color: blue;
+    }
+    div > p {
+        color: green;
+    }
+    section > p {
+        color: red;
+    }
+    div ~ p {
+        color: lightsalmon;
+    }
+    /* or */
+    div.div-elem  {
+        color: purple;
+    }
+    /* or */
+    div .p-elem {
+        color: orange;
+    }
+    
+     p:first-child {
+        color: blue;
+     }
+     p:hover {
+        color: yellow;
+     }
+     p::first-letter {
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+     }
+     p::first-line {
+        color: rgb(211, 9, 9);
+     }
+     
+     [class|="p"] {
+        border: 5px solid black;
+     }
+
+</style>
+<body>
+    <h2>Combination Selector</h2>
+
+    <p>This is a paragraph.This is a paragraph.This is a paragraph.This is a paragraph.This is a paragraph.</p>
+
+    <div class="div-elem">
+        <p class="p-elem">This is para1 inside div</p>
+        <p>This is para2 inside div</p>
+        <section>
+            <p>This is para3 inside section</p>
+        </section>
+    </div>
+    <p>This is para4</p>
+    <p>This is para5</p>
+</body>
+</html>
