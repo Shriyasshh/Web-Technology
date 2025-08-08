@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: width, height, background-color,transform;
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+            transition-delay: 1s;
+            /* transition: width 2s ease-out 1s;  same as above transitons works*/
+        }
+        div:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+            background-color: blue;
+            background-color:rgb(229, 88, 109);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transitions Examples</h1>
+
+    <p>Lets try this out</p>
+
+    <div>
+
+    </div>
+</body>
+
+</html>
