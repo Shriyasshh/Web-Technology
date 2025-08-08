@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Flex Design</title>
+    <style>
+        body {
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: column;
+            grid-auto-flow: column;
+
+        }
+
+        div {
+            font-size: 15px;
+            border: 2px solid red;
+            margin-left: 6px;
+            padding: 5px;
+        }
+
+        @media screen and (max-width: 700px) {
+            body {
+                background-color: lightblue;
+                grid-auto-flow: row;
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-1">
+        <p>
+            Digital systems have such a prominent role in everyday life that we
+            refer to the present technological period as the digital age.
+        </p>
+    </div>
+    <br />
+    <div class="container-2">
+        <p>
+            . Digital systems are used in communication, busi ness transactions,
+            traffic control, spacecraft guidance, medical treatment, weather mon
+            itoring, the Internet, and many other commercial, industrial, and
+            scientific enterprises.
+        </p>
+    </div>
+    <br />
+    <div class="container-3">
+        <p>
+            We have digital telephones, digital televisions, digital versatile
+            discs, digital cameras, handheld devices, and, of course, digital
+            computers.
+        </p>
+    </div>
+    <br />
+</body>
+
+</html>
